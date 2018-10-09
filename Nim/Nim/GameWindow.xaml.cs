@@ -78,10 +78,16 @@ namespace Nim
         {
             GameWindow window = new GameWindow();
 
+            window.game = new GameLogic();
+
             window.game.difficulty = this.game.difficulty;
             window.game.opponentType = this.game.opponentType;
             window.game.PlayerOneName = this.game.PlayerOneName;
             window.game.PlayerTwoName = this.game.PlayerTwoName;
+
+            window.difficultyDisplay1.Content = ((this.game.difficulty == Difficulty.Easy)
+                ? Difficulty.Easy : (this.game.difficulty == Difficulty.Medium)
+                ? Difficulty.Medium : Difficulty.Hard);
 
             window.Show();
             this.Close();

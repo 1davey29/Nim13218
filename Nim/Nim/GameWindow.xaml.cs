@@ -86,9 +86,163 @@ namespace Nim
 
                 case Difficulty.Medium:
 
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i < 2)
+                        {
+                            Pile_1.RowDefinitions.Add(new RowDefinition());
+                        }
+                        
+                        if (i < 5)
+                        {
+                            Pile_2.RowDefinitions.Add(new RowDefinition());
+                        }
+
+                        Pile_4.RowDefinitions.Add(new RowDefinition());
+                    }
+
+                    for (int i = 0; i < 2; i++)
+                    {
+                        string name = "_p1o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_1.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
+                    }
+
+                    for (int i = 0; i < 5; i++)
+                    {
+                        string name = "_p2o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_2.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
+                    }
+
+                    for (int i = 0; i < 7; i++)
+                    {
+                        string name = "_p4o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_4.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
+                    }
+
                     break;
 
                 case Difficulty.Hard:
+
+                    for (int i = 0; i < 9; i++)
+                    {
+                        if (i < 2)
+                        {
+                            Pile_1.RowDefinitions.Add(new RowDefinition());
+                        }
+
+                        if (i < 3)
+                        {
+                            Pile_2.RowDefinitions.Add(new RowDefinition());
+                        }
+
+                        if (i < 8)
+                        {
+                            Pile_3.RowDefinitions.Add(new RowDefinition());
+                        }
+
+                        Pile_4.RowDefinitions.Add(new RowDefinition());
+                    }
+
+                    for (int i = 0; i < 2; i++)
+                    {
+                        string name = "_p1o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_1.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
+                    }
+
+                    for (int i = 0; i < 3; i++)
+                    {
+                        string name = "_p2o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_2.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
+                    }
+
+                    for (int i = 0; i < 8; i++)
+                    {
+                        string name = "_p3o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_3.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
+                    }
+
+                    for (int i = 0; i < 9; i++)
+                    {
+                        string name = "_p4o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_4.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
+                    }
 
                     break;
 

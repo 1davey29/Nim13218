@@ -8,7 +8,7 @@
         Title="StartWindow" Height="450" Width="800">
     <Grid>
         <Label HorizontalAlignment="Left" Margin="424,99,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="gameTitle" Content="Nim" FontFamily="Times New Roman" FontSize="48" Margin="350,55,350,302.667"/>
+        <Label x:Name="gameTitle" Content="Nim" FontFamily="Times New Roman" FontSize="48" Margin="350,55,341.2,302.8"/>
         <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="362.5,171,0,0" FontSize="24" FontFamily="Times New Roman" Click="startButton_Click"/>
         <Button x:Name="instructionsButton" Content="Help" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="362.5,231,0,0" FontSize="24" FontFamily="Times New Roman" Click="instructionsButton_Click"/>
         <Button x:Name="exitButton" Content="Quit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="362.5,291,0,0" FontSize="24" FontFamily="Times New Roman" Click="exitButton_Click"/>

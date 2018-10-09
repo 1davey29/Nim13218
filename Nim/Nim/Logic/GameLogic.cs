@@ -9,13 +9,7 @@ namespace Nim.Logic
     class GameLogic
     {
         public bool hasComputerPlayer { get; set; }
-        private List<List<int>> piles;
-
-        public List<List<int>> MyProperty
-        {
-            get { return piles; }
-            set { piles = value; }
-        }
+        public List<List<int>> piles { get; set; }
 
 
         public void TakeTurn(bool isPlayerOne)

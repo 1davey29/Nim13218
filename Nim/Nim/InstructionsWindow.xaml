@@ -8,6 +8,6 @@
         Title="InstructionsWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="218,85,0,0" Height="237" Width="379" FontFamily="Times New Roman"/>
-        <Button x:Name="exitButton" Content="Quit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="362.5,343,0,0" FontSize="24" FontFamily="Times New Roman" Click="exitButton_Click"/>
+        <Button x:Name="exitButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="362.5,343,0,0" FontSize="24" FontFamily="Times New Roman" Click="exitButton_Click"/>
     </Grid>
 </Window>

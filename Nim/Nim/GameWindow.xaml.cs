@@ -25,6 +25,8 @@ namespace Nim
         public GameWindow()
         {
             InitializeComponent();
+
+
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)

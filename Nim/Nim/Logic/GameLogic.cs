@@ -19,8 +19,11 @@ namespace Nim.Logic
         Hard
     }
 
+
     public class GameLogic
     {
+        public string PlayerOneName { get; set; }
+        public string PlayerTwoName { get; set; }
         public bool hasComputerPlayer { get; set; }
         public List<List<int>> piles { get; set; }
         public Opponent opponentType { get; set; }

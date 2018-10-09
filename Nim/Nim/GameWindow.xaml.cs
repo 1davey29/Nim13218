@@ -25,15 +25,28 @@ namespace Nim
         public GameWindow()
         {
             InitializeComponent();
-
-
         }
 
         public void Setup()
         {
+            Pile_1.Children.Clear();
+            Pile_2.Children.Clear();
+            Pile_3.Children.Clear();
+            Pile_4.Children.Clear();
+            Pile_1.RowDefinitions.Clear();
+            Pile_2.RowDefinitions.Clear();
+            Pile_3.RowDefinitions.Clear();
+            Pile_4.RowDefinitions.Clear();
+
             switch (game.difficulty)
             {
                 case Difficulty.Easy:
+
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Pile_1.RowDefinitions.Add(new RowDefinition());
+                        Pile_4.RowDefinitions.Add(new RowDefinition());
+                    }
 
                     for (int i = 0; i < 3; i++)
                     {
@@ -49,6 +62,24 @@ namespace Nim
                         };
 
                         Pile_1.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
+                    }
+
+                    for (int i = 0; i < 3; i++)
+                    {
+                        string name = "_p4o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_4.Children.Add(pileObject);
+                        Grid.SetRow(pileObject, i);
                     }
 
                     break;

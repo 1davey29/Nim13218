@@ -81,6 +81,7 @@
     <Compile Include="InstructionsWindow.xaml.cs">
       <DependentUpon>InstructionsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Logic\GameLogic.cs" />
     <Compile Include="SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>

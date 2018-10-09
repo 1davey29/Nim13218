@@ -62,6 +62,8 @@ namespace Nim
 
             window.game = game;
 
+            window.difficultyDisplay1.Content = ((bool)(Easy.IsChecked) ? "Easy" : ((bool)(Medium.IsChecked) ? "Medium" : "Hard"));
+
             window.Setup();
 
             window.Show();

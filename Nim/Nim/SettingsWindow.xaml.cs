@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nim.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace Nim
     /// </summary>
     public partial class SettingsWindow : Window
     {
+        GameLogic game = new GameLogic();
+
         public SettingsWindow()
         {
             InitializeComponent();
@@ -33,9 +36,31 @@ namespace Nim
 
         private void startButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AI.IsChecked == true)
+            {
+                game.opponentType = Opponent.AI;
+            }
+            else
+            {
+                game.opponentType = Opponent.Human;
+            }
+
+            if (Easy.IsChecked == true)
+            {
+                game.difficulty = Difficulty.Easy;
+            }
+            else if (Medium.IsChecked == true)
+            {
+                game.difficulty = Difficulty.Medium;
+            }
+            else
+            {
+                game.difficulty = Difficulty.Hard;
+            }
+
             GameWindow window = new GameWindow();
 
-
+            window.game = game;
 
             window.Show();
             this.Close();

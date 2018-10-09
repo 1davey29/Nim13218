@@ -11,11 +11,11 @@
         <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="247,335,0,0" FontSize="24" FontFamily="Times New Roman" Click="startButton_Click"/>
         <TextBox x:Name="playerTwoName" HorizontalAlignment="Left" Height="43" Margin="333,284,0,0" TextWrapping="Wrap" Text="Player Two" VerticalAlignment="Top" Width="146" FontFamily="Times New Roman" FontSize="24"/>
         <TextBox x:Name="playerOneName" HorizontalAlignment="Left" Height="47" Margin="333,146,0,0" TextWrapping="Wrap" Text="Player One" VerticalAlignment="Top" Width="146" FontFamily="Times New Roman" FontSize="24"/>
-        <RadioButton Content="VS AI" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,198,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Opponent"/>
-        <RadioButton Content="VS Human" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,230,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Opponent"/>
-        <RadioButton Content="Easy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,177,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Difficulty"/>
-        <RadioButton Content="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,209,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Difficulty"/>
-        <RadioButton Content="Hard" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,241,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Difficulty"/>
+        <RadioButton x:Name="AI" IsChecked="True" Content="VS AI" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,198,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Opponent"/>
+        <RadioButton x:Name="Human" IsChecked="False" Content="VS Human" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,230,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Opponent"/>
+        <RadioButton x:Name="Easy" IsChecked="True" Content="Easy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,177,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Difficulty"/>
+        <RadioButton x:Name="Medium" IsChecked="False" Content="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,209,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Difficulty"/>
+        <RadioButton x:Name="Hard" IsChecked="False" Content="Hard" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,241,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Difficulty"/>
 
     </Grid>
 </Window>

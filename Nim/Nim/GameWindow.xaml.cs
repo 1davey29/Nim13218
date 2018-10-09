@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nim.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace Nim
     /// </summary>
     public partial class GameWindow : Window
     {
+        public GameLogic game { get; set; }
+
         public GameWindow()
         {
             InitializeComponent();

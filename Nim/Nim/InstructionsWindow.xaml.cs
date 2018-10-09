@@ -26,7 +26,9 @@ namespace Nim
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
         }
     }
 }

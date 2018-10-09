@@ -27,17 +27,21 @@ namespace Nim
 
         private void startButton_Click(object sender, RoutedEventArgs e)
         {
-
+            SettingsWindow window = new SettingsWindow();
+            window.Show();
+            this.Close();
         }
 
         private void instructionsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            InstructionsWindow window = new InstructionsWindow();
+            window.Show();
+            this.Close();
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

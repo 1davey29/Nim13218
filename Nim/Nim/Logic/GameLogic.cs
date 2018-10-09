@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Nim.Logic
 {
-    enum Opponent
+    public enum Opponent
     {
         AI,
         Human
     }
 
-    enum Difficulty
+    public enum Difficulty
     {
         Easy,
         Medium,

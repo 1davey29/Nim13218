@@ -9,8 +9,8 @@
     <Grid>
         <Button x:Name="exitButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="553,335,0,0" FontSize="24" FontFamily="Times New Roman" Click="exitButton_Click"/>
         <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="247,335,0,0" FontSize="24" FontFamily="Times New Roman" Click="startButton_Click"/>
-        <TextBox x:Name="playerTwoName" HorizontalAlignment="Left" Height="43" Margin="333,284,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="146" FontFamily="Times New Roman" FontSize="24"/>
-        <TextBox x:Name="playerOneName" HorizontalAlignment="Left" Height="47" Margin="333,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="146" FontFamily="Times New Roman" FontSize="24"/>
+        <TextBox x:Name="playerTwoName" HorizontalAlignment="Left" Height="43" Margin="333,284,0,0" TextWrapping="Wrap" Text="Player Two" VerticalAlignment="Top" Width="146" FontFamily="Times New Roman" FontSize="24"/>
+        <TextBox x:Name="playerOneName" HorizontalAlignment="Left" Height="47" Margin="333,146,0,0" TextWrapping="Wrap" Text="Player One" VerticalAlignment="Top" Width="146" FontFamily="Times New Roman" FontSize="24"/>
         <RadioButton Content="VS AI" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,198,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Opponent"/>
         <RadioButton Content="VS Human" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,230,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Opponent"/>
         <RadioButton Content="Easy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,177,0,0" FontFamily="Times New Roman" FontSize="24" GroupName="Difficulty"/>

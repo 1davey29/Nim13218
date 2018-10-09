@@ -21,6 +21,7 @@ namespace Nim
     public partial class GameWindow : Window
     {
         public GameLogic game { get; set; }
+        private int pileNumberSelected = 0;
 
         public GameWindow()
         {
@@ -61,6 +62,8 @@ namespace Nim
                             Margin = new Thickness(5)
                         };
 
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
+
                         Pile_1.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
                     }
@@ -77,6 +80,8 @@ namespace Nim
                             Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
                             Margin = new Thickness(5)
                         };
+
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
 
                         Pile_4.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
@@ -114,6 +119,8 @@ namespace Nim
                             Margin = new Thickness(5)
                         };
 
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
+
                         Pile_1.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
                     }
@@ -131,6 +138,8 @@ namespace Nim
                             Margin = new Thickness(5)
                         };
 
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
+
                         Pile_2.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
                     }
@@ -147,6 +156,8 @@ namespace Nim
                             Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
                             Margin = new Thickness(5)
                         };
+
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
 
                         Pile_4.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
@@ -189,6 +200,8 @@ namespace Nim
                             Margin = new Thickness(5)
                         };
 
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
+
                         Pile_1.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
                     }
@@ -205,6 +218,8 @@ namespace Nim
                             Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
                             Margin = new Thickness(5)
                         };
+
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
 
                         Pile_2.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
@@ -223,6 +238,8 @@ namespace Nim
                             Margin = new Thickness(5)
                         };
 
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
+
                         Pile_3.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
                     }
@@ -240,6 +257,8 @@ namespace Nim
                             Margin = new Thickness(5)
                         };
 
+                        pileObject.MouseLeftButtonUp += pileObject_Click;
+
                         Pile_4.Children.Add(pileObject);
                         Grid.SetRow(pileObject, i);
                     }
@@ -249,6 +268,54 @@ namespace Nim
                 default:
 
                     throw new Exception("Code Error");
+            }
+        }
+
+        private void pileObject_Click(object sender, RoutedEventArgs e)
+        {
+            Rectangle rectangle = sender as Rectangle;
+
+            string name = rectangle.Name;
+
+            int pileNumber = name[2] - 48;
+
+            if (pileNumberSelected == 0)
+            {
+                pileNumberSelected = pileNumber;
+            }
+
+            if (pileNumber == pileNumberSelected)
+            {
+                switch (pileNumber)
+                {
+                    case 1:
+
+                        Pile_1.Children.Remove(rectangle);
+
+                        break;
+
+                    case 2:
+
+                        Pile_2.Children.Remove(rectangle);
+
+                        break;
+
+                    case 3:
+
+                        Pile_3.Children.Remove(rectangle);
+
+                        break;
+
+                    case 4:
+
+                        Pile_4.Children.Remove(rectangle);
+
+                        break;
+
+                    default:
+
+                        break;
+                }
             }
         }
 

@@ -27,6 +27,44 @@ namespace Nim
             InitializeComponent();
         }
 
+        public void Setup()
+        {
+            switch (game.difficulty)
+            {
+                case Difficulty.Easy:
+
+                    for (int i = 0; i < 3; i++)
+                    {
+                        string name = "_p1o" + i;
+
+                        Rectangle pileObject = new Rectangle()
+                        {
+                            Name = name,
+                            Height = 20,
+                            Width = 20,
+                            Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                            Margin = new Thickness(5)
+                        };
+
+                        Pile_1.Children.Add(pileObject);
+                    }
+
+                    break;
+
+                case Difficulty.Medium:
+
+                    break;
+
+                case Difficulty.Hard:
+
+                    break;
+
+                default:
+
+                    throw new Exception("Code Error");
+            }
+        }
+
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow window = new MainWindow();

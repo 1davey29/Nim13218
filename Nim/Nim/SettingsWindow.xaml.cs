@@ -62,6 +62,8 @@ namespace Nim
 
             window.game = game;
 
+            window.Setup();
+
             window.Show();
             this.Close();
         }

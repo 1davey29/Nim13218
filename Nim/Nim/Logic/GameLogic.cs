@@ -31,7 +31,13 @@ namespace Nim.Logic
 
         public void TakeTurn(bool isPlayerOne)
         {
+            if (!isPlayerOne && hasComputerPlayer)
+            {
 
+            } else
+            {
+
+            }
         }
     }
 }

@@ -28,5 +28,10 @@ namespace Nim
         {
 
         }
+
+        private void restartButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

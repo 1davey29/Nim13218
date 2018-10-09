@@ -345,7 +345,7 @@ namespace Nim
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void endTurnButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

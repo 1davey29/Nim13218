@@ -25,6 +25,8 @@ namespace Nim
         public GameWindow()
         {
             InitializeComponent();
+
+
         }
 
         public void Setup()
@@ -76,7 +78,10 @@ namespace Nim
         {
             GameWindow window = new GameWindow();
 
-
+            window.game.difficulty = this.game.difficulty;
+            window.game.opponentType = this.game.opponentType;
+            window.game.PlayerOneName = this.game.PlayerOneName;
+            window.game.PlayerTwoName = this.game.PlayerTwoName;
 
             window.Show();
             this.Close();

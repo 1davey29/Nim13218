@@ -43,5 +43,15 @@ namespace Nim
         {
             this.Close();
         }
+
+        private void startButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            startButton.Background = Brushes.Yellow;
+        }
+
+        private void startButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            startButton.Background = Brushes.Cyan;
+        }
     }
 }

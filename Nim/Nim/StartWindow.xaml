@@ -6,12 +6,16 @@
         xmlns:local="clr-namespace:Nim"
         mc:Ignorable="d"
         Title="StartWindow" Height="450" Width="800">
+    <Window.Resources>
+        <SolidColorBrush x:Key="startButton_MouseEnter" Color="Yellow"></SolidColorBrush>
+    </Window.Resources>
     <Grid>
         <Label HorizontalAlignment="Left" Margin="424,99,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="gameTitle" Content="Nim" FontFamily="Times New Roman" FontSize="48" Margin="350,55,341.2,302.8"/>
-        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="362.5,171,0,0" FontSize="24" FontFamily="Times New Roman" Click="startButton_Click"/>
-        <Button x:Name="instructionsButton" Content="Help" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="362.5,231,0,0" FontSize="24" FontFamily="Times New Roman" Click="instructionsButton_Click"/>
-        <Button x:Name="exitButton" Content="Quit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="362.5,291,0,0" FontSize="24" FontFamily="Times New Roman" Click="exitButton_Click"/>
+        <Label  x:Name="gameTitle"          Content="Nim"   FontFamily="Times New Roman" FontSize="48" Margin="350, 55, 341.2, 302.8" Foreground="Orange"/>
+        <Button x:Name="startButton"        Content="Start" FontFamily="Times New Roman" FontSize="24" Margin="362.5, 171, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="Cyan" Click="startButton_Click" MouseEnter="startButton_MouseEnter" MouseLeave="startButton_MouseLeave"></Button>
+
+        <Button x:Name="instructionsButton" Content="Help"  FontFamily="Times New Roman" FontSize="24" Margin="362.5, 231, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="Cyan" Click="instructionsButton_Click"/>
+        <Button x:Name="exitButton"         Content="Quit"  FontFamily="Times New Roman" FontSize="24" Margin="362.5, 291, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="Cyan" Click="exitButton_Click"/>
 
     </Grid>
 </Window>

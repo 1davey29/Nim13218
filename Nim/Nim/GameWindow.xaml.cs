@@ -341,6 +341,8 @@ namespace Nim
                 ? Difficulty.Easy : (this.game.difficulty == Difficulty.Medium)
                 ? Difficulty.Medium : Difficulty.Hard);
 
+            window.Setup();
+
             window.Show();
             this.Close();
         }

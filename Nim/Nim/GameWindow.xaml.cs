@@ -353,21 +353,30 @@ namespace Nim
         {
             if (Pile_1.Children.Count == 0 && Pile_2.Children.Count == 0 && Pile_3.Children.Count == 0 && Pile_4.Children.Count == 0)
             {
-
-            }
-
-            pileNumberSelected = 0;
-
-            if (isFirstPlayerTurn)
-            {
-                currentPlayerDisplay1.Content = game.PlayerTwoName;
+                if (MessageBox.Show("The Winner is " + (isFirstPlayerTurn ? game.PlayerTwoName : game.PlayerOneName), "Would you like to play again?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    restartButton_Click(sender, e);
+                }
+                else
+                {
+                    exitButton_Click(sender, e);
+                }
             }
             else
             {
-                currentPlayerDisplay1.Content = game.PlayerOneName;
-            }
+                pileNumberSelected = 0;
 
-            isFirstPlayerTurn = !isFirstPlayerTurn;
+                if (isFirstPlayerTurn)
+                {
+                    currentPlayerDisplay1.Content = game.PlayerTwoName;
+                }
+                else
+                {
+                    currentPlayerDisplay1.Content = game.PlayerOneName;
+                }
+
+                isFirstPlayerTurn = !isFirstPlayerTurn;
+            }
         }
     }
 }

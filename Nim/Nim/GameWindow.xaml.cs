@@ -22,6 +22,7 @@ namespace Nim
     {
         public GameLogic game { get; set; }
         private int pileNumberSelected = 0;
+        private bool isFirstPlayerTurn = true;
 
         public GameWindow()
         {
@@ -343,13 +344,31 @@ namespace Nim
 
             window.Setup();
 
+            window.currentPlayerDisplay1.Content = game.PlayerOneName;
+
             window.Show();
             this.Close();
         }
 
         private void endTurnButton_Click(object sender, RoutedEventArgs e)
         {
+            if (Pile_1.Children.Count == 0 && Pile_2.Children.Count == 0 && Pile_3.Children.Count == 0 && Pile_4.Children.Count == 0)
+            {
 
+            }
+
+            pileNumberSelected = 0;
+
+            if (isFirstPlayerTurn)
+            {
+                currentPlayerDisplay1.Content = game.PlayerTwoName;
+            }
+            else
+            {
+                currentPlayerDisplay1.Content = game.PlayerOneName;
+            }
+
+            isFirstPlayerTurn = !isFirstPlayerTurn;
         }
     }
 }

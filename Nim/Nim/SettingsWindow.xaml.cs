@@ -58,6 +58,9 @@ namespace Nim
                 game.difficulty = Difficulty.Hard;
             }
 
+            game.PlayerOneName = playerOneName.Text;
+            game.PlayerTwoName = playerTwoName.Text;
+
             GameWindow window = new GameWindow();
 
             window.game = game;
@@ -65,6 +68,8 @@ namespace Nim
             window.difficultyDisplay1.Content = ((bool)(Easy.IsChecked) ? "Easy" : ((bool)(Medium.IsChecked) ? "Medium" : "Hard"));
 
             window.Setup();
+
+            window.currentPlayerDisplay1.Content = game.PlayerOneName;
 
             window.Show();
             this.Close();

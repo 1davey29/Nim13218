@@ -339,8 +339,7 @@ namespace Nim
             window.game.PlayerTwoName = this.game.PlayerTwoName;
 
             window.difficultyDisplay1.Content = ((this.game.difficulty == Difficulty.Easy)
-                ? Difficulty.Easy : (this.game.difficulty == Difficulty.Medium)
-                ? Difficulty.Medium : Difficulty.Hard);
+                ? "Easy" : (this.game.difficulty == Difficulty.Medium) ? "Medium" : "Hard");
 
             window.Setup();
 

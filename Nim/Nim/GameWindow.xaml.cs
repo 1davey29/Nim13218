@@ -272,7 +272,7 @@ namespace Nim
             }
         }
 
-        private void pileObject_Click(object sender, RoutedEventArgs e)
+        public void pileObject_Click(object sender, RoutedEventArgs e)
         {
             Rectangle rectangle = sender as Rectangle;
 
@@ -320,14 +320,14 @@ namespace Nim
             }
         }
 
-        private void exitButton_Click(object sender, RoutedEventArgs e)
+        public void exitButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow window = new MainWindow();
             window.Show();
             this.Close();
         }
 
-        private void restartButton_Click(object sender, RoutedEventArgs e)
+        public void restartButton_Click(object sender, RoutedEventArgs e)
         {
             GameWindow window = new GameWindow();
 
@@ -349,7 +349,7 @@ namespace Nim
             this.Close();
         }
 
-        private void endTurnButton_Click(object sender, RoutedEventArgs e)
+        public void endTurnButton_Click(object sender, RoutedEventArgs e)
         {
             if (Pile_1.Children.Count == 0 && Pile_2.Children.Count == 0 && Pile_3.Children.Count == 0 && Pile_4.Children.Count == 0)
             {

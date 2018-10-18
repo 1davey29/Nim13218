@@ -16,5 +16,29 @@ namespace Nim.Tests
         {
             Assert.Fail();
         }
+
+        [TestMethod()]
+        public void pileObject_ClickTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void exitButton_ClickTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void restartButton_ClickTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void endTurnButton_ClickTest()
+        {
+            Assert.Fail();
+        }
     }
 }

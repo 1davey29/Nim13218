@@ -368,14 +368,24 @@ namespace Nim
 
                 if (isFirstPlayerTurn)
                 {
-                    currentPlayerDisplay1.Content = game.PlayerTwoName;
+                    if (game.hasComputerPlayer)
+                    {
+                        game.TakeAiTurn(this);
+                    }
+                    else
+                    {
+                        currentPlayerDisplay1.Content = game.PlayerTwoName;
+                    }
                 }
                 else
                 {
                     currentPlayerDisplay1.Content = game.PlayerOneName;
                 }
 
-                isFirstPlayerTurn = !isFirstPlayerTurn;
+                if (!game.hasComputerPlayer)
+                {
+                    isFirstPlayerTurn = !isFirstPlayerTurn;
+                }
             }
         }
     }

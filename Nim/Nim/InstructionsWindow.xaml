@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="InstructionsWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="1) Choose a Pile&#xD;&#xA;2) Select a Block from the Pile to Remove It&#xD;&#xA;3) Press End Turn to End Your Turn&#xD;&#xA;&#xD;&#xA;Win Condition: Make Your Opponent Remove The Last Block In The Game&#xD;&#xA;&#xD;&#xA;*Blocks Can Only Be Removed From One Pile Per Turn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="218,85,0,0" Height="237" Width="379" FontFamily="Times New Roman"/>
+        <Label Content="1) Choose a Pile&#xD;&#xA;2) Select a Block from the Pile to Remove It&#xD;&#xA;3) Press End Turn to End Your Turn&#xD;&#xA;&#xD;&#xA;Win Condition: Make Your Opponent&#xD;&#xA;&#x9;Remove The Last Block In The Game&#xD;&#xA;&#xD;&#xA;*Blocks Can Only Be Removed From One Pile Per Turn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="218,85,0,0" Height="237" Width="379" FontFamily="Times New Roman" FontSize="16"/>
         <Button x:Name="exitButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="362.5,343,0,0" FontSize="24" FontFamily="Times New Roman" Click="exitButton_Click"/>
     </Grid>
 </Window>

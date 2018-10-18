@@ -24,12 +24,6 @@ namespace Nim.Tests
         }
 
         [TestMethod()]
-        public void exitButton_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void restartButton_ClickTest()
         {
             Assert.Fail();

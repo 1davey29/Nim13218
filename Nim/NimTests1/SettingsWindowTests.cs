@@ -11,13 +11,6 @@ namespace Nim.Tests
     [TestClass()]
     public class SettingsWindowTests
     {
-
-        [TestMethod()]
-        public void exitButton_ClickTest()
-        {
-            Assert.Fail();
-        }
-
         [TestMethod()]
         public void startButton_ClickTest()
         {

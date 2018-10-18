@@ -24,7 +24,7 @@ namespace Nim
             InitializeComponent();
         }
 
-        private void exitButton_Click(object sender, RoutedEventArgs e)
+        public void exitButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow window = new MainWindow();
             window.Show();

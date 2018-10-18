@@ -25,31 +25,31 @@ namespace Nim
             InitializeComponent();
         }
 
-        private void startButton_Click(object sender, RoutedEventArgs e)
+        public void startButton_Click(object sender, RoutedEventArgs e)
         {
             SettingsWindow window = new SettingsWindow();
             window.Show();
             this.Close();
         }
 
-        private void instructionsButton_Click(object sender, RoutedEventArgs e)
+        public void instructionsButton_Click(object sender, RoutedEventArgs e)
         {
             InstructionsWindow window = new InstructionsWindow();
             window.Show();
             this.Close();
         }
 
-        private void exitButton_Click(object sender, RoutedEventArgs e)
+        public void exitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void startButton_MouseEnter(object sender, MouseEventArgs e)
+        public void startButton_MouseEnter(object sender, MouseEventArgs e)
         {
             startButton.Background = Brushes.Yellow;
         }
 
-        private void startButton_MouseLeave(object sender, MouseEventArgs e)
+        public void startButton_MouseLeave(object sender, MouseEventArgs e)
         {
             startButton.Background = Brushes.Cyan;
         }

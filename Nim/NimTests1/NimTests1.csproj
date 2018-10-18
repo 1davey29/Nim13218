@@ -57,7 +57,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="GameWindowTests.cs" />
+    <Compile Include="InstructionsWindowTests.cs" />
+    <Compile Include="MainWindowTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsWindowTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

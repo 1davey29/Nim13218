@@ -29,14 +29,93 @@ namespace Nim.Logic
         public Opponent opponentType { get; set; }
         public Difficulty difficulty { get; set; }
 
-        public void TakeTurn(bool isPlayerOne)
+        public void TakeAiTurn(GameWindow game)
         {
-            if (!isPlayerOne && hasComputerPlayer)
-            {
+            Random rand = new Random();
+            int pile = 0;
+            int blockCount = 0;
 
-            } else
-            {
+            NEWPILE:
 
+            pile = rand.Next(4);
+
+            switch (pile)
+            {
+                case 0:
+
+                    if (game.Pile_1.Children.Count > 0)
+                    {
+                        blockCount = rand.Next(game.Pile_1.Children.Count) + 1;
+                        
+                        for (int i = 0; i < blockCount; i++)
+                        {
+                            game.Pile_1.Children.RemoveAt(0);
+                        }
+                    }
+                    else
+                    {
+                        goto NEWPILE;
+                    }
+
+                    break;
+
+                case 1:
+
+                    if (game.Pile_2.Children.Count > 0)
+                    {
+                        blockCount = rand.Next(game.Pile_2.Children.Count) + 1;
+
+                        for (int i = 0; i < blockCount; i++)
+                        {
+                            game.Pile_2.Children.RemoveAt(0);
+                        }
+                    }
+                    else
+                    {
+                        goto NEWPILE;
+                    }
+
+                    break;
+
+                case 2:
+
+                    if (game.Pile_3.Children.Count > 0)
+                    {
+                        blockCount = rand.Next(game.Pile_3.Children.Count) + 1;
+
+                        for (int i = 0; i < blockCount; i++)
+                        {
+                            game.Pile_3.Children.RemoveAt(0);
+                        }
+                    }
+                    else
+                    {
+                        goto NEWPILE;
+                    }
+
+                    break;
+
+                case 3:
+
+                    if (game.Pile_4.Children.Count > 0)
+                    {
+                        blockCount = rand.Next(game.Pile_4.Children.Count) + 1;
+
+                        for (int i = 0; i < blockCount; i++)
+                        {
+                            game.Pile_4.Children.RemoveAt(0);
+                        }
+                    }
+                    else
+                    {
+                        goto NEWPILE;
+                    }
+
+                    break;
+
+                default:
+
+                    break;
             }
         }
     }

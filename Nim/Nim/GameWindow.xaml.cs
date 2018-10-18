@@ -349,11 +349,11 @@ namespace Nim
             this.Close();
         }
 
-        public void endTurnButton_Click(object sender, RoutedEventArgs e)
+        public bool checkWinCondition(bool firstPlayer, object sender, RoutedEventArgs e)
         {
             if (Pile_1.Children.Count == 0 && Pile_2.Children.Count == 0 && Pile_3.Children.Count == 0 && Pile_4.Children.Count == 0)
             {
-                if (MessageBox.Show("The Winner is " + (isFirstPlayerTurn ? game.PlayerTwoName : game.PlayerOneName), "Would you like to play again?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show("The Winner is " + (firstPlayer ? game.PlayerTwoName : game.PlayerOneName), "Would you like to play again?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     restartButton_Click(sender, e);
                 }
@@ -361,16 +361,26 @@ namespace Nim
                 {
                     exitButton_Click(sender, e);
                 }
+
+                return true;
             }
-            else
+
+            return false;
+        }
+
+        public void endTurnButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!checkWinCondition(isFirstPlayerTurn, sender, e))
             {
+
                 pileNumberSelected = 0;
 
                 if (isFirstPlayerTurn)
                 {
-                    if (game.hasComputerPlayer)
+                    if (game.opponentType == Opponent.AI)
                     {
                         game.TakeAiTurn(this);
+                        checkWinCondition(!isFirstPlayerTurn, sender, e);
                     }
                     else
                     {
@@ -382,10 +392,11 @@ namespace Nim
                     currentPlayerDisplay1.Content = game.PlayerOneName;
                 }
 
-                if (!game.hasComputerPlayer)
+                if (!(game.opponentType == Opponent.AI))
                 {
                     isFirstPlayerTurn = !isFirstPlayerTurn;
                 }
+
             }
         }
     }
